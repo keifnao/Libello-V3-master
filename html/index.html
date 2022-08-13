@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Josefin+Sans:wght@400;700&family=Poppins:wght@100;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Main JS -->
+    <script type="module" src="../js/main.js" defer></script>
+
+    <!-- Stuff that varies from page to page -->
+    <title>Libello</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-sm">
+        <!-- Navbar Brand -->
+        <a class="navbar-brand brand-text" href="index.html">Libello</a>
+        <!-- Navbar Expand Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="material-symbols-outlined">more_horiz</span>
+        </button>
+
+        <!-- Navbar Content (Collapsable) -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav header-text">
+                <!-- About Link -->
+                <li class="nav-item nav__about">
+                    <a class="nav-link" href="about.html">about</a>
+                </li>
+                <!-- Sign in Link -->
+                <li class="nav-item nav__sign-in">
+                    <a class="nav-link" href="register.html">register</a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+    
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Title Section -->
+        <section id="title">
+            <div class="title-wrapper container-fluid">
+                <div class="row">
+                    <div class="title__content col-lg-6">
+                        <h1 class="spec-text">Improve your performance in the workplace.</h1>
+                        <h4 class="body-text">Organize your assignments from the Schoology API.</h4>
+                        <a href="register.html">
+                            <button class="get-started-button header-text">Get Started</button>
+                        </a>
+                    </div>
+                    <img class="title__image col-lg-6" draggable=false src="../images/clean_desk.jpg" alt="clean_desk">
+                <!-- Row -->
+                </div>
+            <!-- Title Wrapper -->
+            </div>
+        </section>
+
+        <!-- Checklist Section -->
+        <section id="checklist">
+            <div class="checklist-wrapper container-fluid">
+                <div class="row">
+                    <img class="checklist__image col-lg-4" draggable=false src="../images/todo.png" alt="">
+
+                    <div class="checklist__content col-lg-4">
+                        <h1 class="spec-text">The Better todo list.</h1>
+                        <h4 class="body-text">Check on your assignments from Schoology.</h4>
+                        <h4 class="header-text">View completion and due dates outside of Schoology.com as well as
+                            assignments without due dates.</h4>
+                    </div>
+                <!-- Row -->
+                </div>
+            <!-- Checklist Wrapper -->
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div class="features-wrapper container-fluid">
+                <h1 class="emphasis-text">Features</h1>
+                <div class="row">
+                    <div class="features__upload col-sm-4">
+                        <span class="material-symbols-outlined icon__upload">cloud_upload</span>
+                        <h2 class="emphasis-text">Upload</h2>
+                        <h4 class="body-text">Schoology assignments via the Schoolopy Module.</h4>
+                    </div>
+                    <div class="features__schedule col-sm-4">
+                        <span class="material-symbols-outlined icon__schedule">calendar_month</span>
+                        <h2 class="emphasis-text">Schedule</h2>
+                        <h4 class="body-text">View due dates and time until submission.</h4>
+                    </div>
+                    <div class="features__organize col-sm-4">
+                        <span class="material-symbols-outlined icon__organize">inventory</span>
+                        <h2 class="emphasis-text">Organize</h2>
+                        <h4 class="body-text">Assignments can be fit into different classes.</h4>
+                    </div>
+                <!-- Row -->
+                </div>
+            <!-- Features Wrapper -->
+            </div>
+        </section>
+
+        <section id="demo">
+            <div class="demo-wrapper container-fluid">
+                <div class="row">
+                    <img class="demo__image col-lg-8" draggable=false src="../images/desk.jpg" alt="desk">
+                    <div class="demo__content col-lg-4">
+                        <h1 class="demo__text demo__text--1 emphasis-text">
+                            Create a comfortable workspace.
+                        </h1>
+                        <h1 class="demo__text demo__text--2 emphasis-text">
+                            Organize with Libello.
+                        </h1>
+                    </div>
+                <!-- Row -->
+                </div>
+            <!-- Demo Wrapper -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-wrapper container-fluid">
+            <div class="container footer__container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h1 class="mb-4 brand-text">
+                            Libello
+                        </h1>
+                        <p class="body-text">
+                            2022 IB Sophomore Summer Project.
+                        </p>
+                        <p class="body-text">
+                            Created with care by students like you.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="text-center col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                        <p class="body-text">
+                            main page
+                        </p>
+                        <p class="body-text">
+                            features
+                        </p>
+                        <p class="body-text">
+                            about
+                        </p>
+                        <p class="body-text">
+                            planner
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="text-end col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <p class="header-text">
+                            Rutam T. - Jaewon C. Summer of 2022
+                        </p>
+
+                        <p class="body-text">email@gmail.com</p>
+                        <p class="body-text">email@gmail.com</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+            <!-- Footer Wrapper -->
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

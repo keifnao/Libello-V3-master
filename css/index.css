@@ -1,0 +1,201 @@
+* {
+    position: relative;
+}
+
+main > section > .container-fluid {
+    height: 100vh;
+}
+@media (max-width: 996px) {
+    main > section > .container-fluid {
+        height: 90vh;
+    }
+}
+
+/* Title Section */
+
+/* https://stackoverflow.com/questions/29240028/css-make-a-background-image-scroll-slower-than-everything-else */
+/* https://www.w3schools.com/howto/howto_css_parallax.asp */
+
+
+.title-wrapper {
+    background: transparent;
+    /* height: 100%; */
+    overflow: hidden;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.title-wrapper > .row {
+    position: relative;
+    margin: 5%;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    z-index: 0;
+    animation: 2s fadeSlide;
+}
+
+.title__content {
+    z-index: 0;
+    background-color: transparent;
+    padding: 2.5% 5%;
+}
+.title__image {
+    z-index: 0;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.get-started-button {
+    padding: 1% 2.5%;
+    margin: 3% 0;
+    margin-right: auto;
+    color: var(--bg-color);
+    background: var(--bg-emphasis);
+    border: 2px solid transparent;
+    font-size: 1.5em;
+    outline: none;
+    border: none;
+    position: relative;
+
+    transition:
+        background 0.5s,
+        color 0.5s,
+        border-color 0.25s;
+}
+.get-started-button::before {
+    content: '';
+    position: absolute;
+    bottom: -10px; right: -10px;
+    border-bottom: 5px solid var(--blue);
+    border-right: 5px solid var(--blue);
+    margin: auto;
+    height: 50px;
+    width: 175px;
+    z-index: 2;
+}
+
+.get-started-button:hover {
+    background: var(--bg-color);
+    color: var(--purple);
+    border-color: 2px var(--purple);
+}
+.get-started-button:hover::before {
+    opacity: 0;
+    bottom: 0%; right: 0%;
+    
+    transition:
+        bottom 0.25s,
+        right 0.25s,
+        opacity 0.25s;
+}
+
+.title__down-arrow {
+    position: absolute;
+    bottom: 1;
+    right: 0;
+    left: 0;
+}
+
+/* Checklist Section */
+
+.checklist-wrapper > .row {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.checklist__image {
+    object-fit: cover;
+    padding: 5%;
+    background-color: var(--blue);
+    border-radius: 20px;
+    max-width: 50%;
+}
+
+@media (max-width: 1700px) {
+    .checklist__image, .checklist__content {
+        width: auto;
+    }
+}
+
+.checklist__content {
+    padding: 2.5% 5%;
+    /* width: auto; */
+}
+
+/* Features Section */
+
+.features-wrapper {
+    text-align: center;
+}
+
+.features-wrapper > .row {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon__upload, .icon__schedule, .icon__organize {
+    font-size: 10em;
+}
+
+.features-wrapper > .row > .col-lg-4 {
+    padding: 0% 7.5%;
+}
+
+/* Demo Section */
+
+.demo-wrapper > .row {
+    margin: 5%;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+    border: 1px solid darkgray;
+}
+
+.demo__image {
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.demo__text {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    margin: 0;
+}
+.demo__text--1 {
+    color: black;
+}
+.demo__text--2 {
+    color: white;
+    background-color: var(--blue)
+}
+
+/* Progress Bar */
+
+.progress-container {
+    position: fixed;
+    width: 100%;
+    height: 4px;
+    z-index: 1;
+}
+.progress-bar {
+    height: 4px;
+    background: var(--bg-emphasis);
+    width: 0%;
+}
